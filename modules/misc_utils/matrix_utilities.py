@@ -125,7 +125,6 @@ def davidson(tot_dim, get_sigma, precond,
         x_init = np.zeros(tot_dim, dtype=np.float64)
         x_init[0] = 1.0
 
-    print("verbose =", verbose)
     eigenvalues, eigenvectors = lib_pyscf.davidson(
         get_sigma,
         [x_init],
